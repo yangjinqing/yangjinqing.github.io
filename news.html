@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻资讯 - 杨金庆实验室</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部横幅 -->
+    <header class="banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <h1>杨金庆</h1>
+                <div class="banner-subtitle">
+                    <span class="typing-text">踏实务本的科学实验室</span>
+                </div>
+            </div>
+            <div class="banner-decoration">
+                <div class="decoration-circle"></div>
+                <div class="decoration-line"></div>
+            </div>
+        </div>
+        <div class="banner-background">
+            <div class="particles"></div>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>简介</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="people.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>人员</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="resources.html" class="nav-link">
+                    <i class="fas fa-book"></i>
+                    <span>资料</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="news.html" class="nav-link">
+                    <i class="fas fa-newspaper"></i>
+                    <span>新闻资讯</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="experience.html" class="nav-link">
+                    <i class="fas fa-comments"></i>
+                    <span>经验交流</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 左侧导航 -->
+        <aside class="side-nav">
+            <a href="#douyin" class="nav-item active">抖音热榜</a>
+            <a href="#weibo" class="nav-item">微博热榜</a>
+            <a href="#ai" class="nav-item">AI热榜</a>
+            <a href="#science" class="nav-item">科学榜</a>
+            <a href="#nowcoder" class="nav-item">牛客网</a>
+        </aside>
+
+        <!-- 右侧内容 -->
+        <div class="content">
+            <h2 id="douyin" class="section-title">抖音热榜</h2>
+            <div class="news-grid">
+                <a href="https://tophub.today/n/K7GdaMgdQy" target="_blank" class="news-card douyin">
+                    <div class="icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>抖音热榜</h3>
+                    <p>实时了解抖音热门话题和趋势</p>
+                </a>
+            </div>
+
+            <h2 id="weibo" class="section-title">微博热榜</h2>
+            <div class="news-grid">
+                <a href="https://s.weibo.com/top/summary" target="_blank" class="news-card weibo">
+                    <div class="icon">
+                        <i class="fab fa-weibo"></i>
+                    </div>
+                    <h3>微博热搜</h3>
+                    <p>关注微博热门话题和实时动态</p>
+                </a>
+            </div>
+
+            <h2 id="ai" class="section-title">AI热榜</h2>
+            <div class="news-grid">
+                <a href="https://tophub.today/n/proPKWkeq6" target="_blank" class="news-card ai">
+                    <div class="icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI热点</h3>
+                    <p>探索人工智能领域的最新发展</p>
+                </a>
+            </div>
+
+            <h2 id="science" class="section-title">科学榜</h2>
+            <div class="news-grid">
+                <a href="https://tophub.today/n/4MdAkNgoxD" target="_blank" class="news-card science">
+                    <div class="icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>科学前沿</h3>
+                    <p>关注科学研究和技术创新</p>
+                </a>
+            </div>
+
+            <h2 id="nowcoder" class="section-title">牛客网</h2>
+            <div class="news-grid">
+                <a href="https://www.nowcoder.com/" target="_blank" class="news-card nowcoder">
+                    <div class="icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>牛客网</h3>
+                    <p>程序员学习和交流平台</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 杨金庆. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+</body>
+</html>

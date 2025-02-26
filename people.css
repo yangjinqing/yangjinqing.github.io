@@ -1,0 +1,202 @@
+/* 主要内容布局 */
+main {
+    display: flex;
+    gap: 2rem;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+    width: 80%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* 左侧导航 */
+.side-nav {
+    flex: 0 0 200px;
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    overflow: hidden;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.nav-item {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e1e4e8;
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.nav-item:last-child {
+    border-bottom: none;
+}
+
+.nav-item.active {
+    background: #3498db;
+    color: white;
+}
+
+.nav-item:hover:not(.active) {
+    background: #f8f9fa;
+    color: #3498db;
+}
+
+/* 右侧内容区域 */
+.content {
+    flex: 1;
+    overflow: auto;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e4e8;
+    scroll-margin-top: 100px; /* 添加滚动边距 */
+}
+
+/* 成员网格布局 */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.member-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.member-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover .member-photo img {
+    transform: scale(1.05);
+}
+
+.member-social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.member-card:hover .member-social {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.member-social a {
+    color: white;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.member-social a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.member-info {
+    padding: 1.5rem;
+}
+
+.member-info h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.member-title {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.member-info p {
+    color: var(--text-light);
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* 毕业生卡片特殊样式 */
+.member-card.alumni {
+    background: linear-gradient(to bottom right, var(--white), #f8f9fa);
+    border: 1px solid #eee;
+}
+
+.member-card.alumni .member-title {
+    color: var(--accent-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .side-nav {
+        position: relative;
+        top: 0;
+        flex: none;
+        margin-bottom: 1rem;
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-photo img {
+        height: 250px;
+    }
+    
+    .member-social {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .section-title {
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+    }
+}

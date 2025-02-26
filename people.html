@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人员 - 杨金庆实验室</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="people.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部横幅 -->
+    <header class="banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <h1>杨金庆</h1>
+                <div class="banner-subtitle">
+                    <span class="typing-text">踏实务本的科学实验室</span>
+                </div>
+            </div>
+            <div class="banner-decoration">
+                <div class="decoration-circle"></div>
+                <div class="decoration-line"></div>
+            </div>
+        </div>
+        <div class="banner-background">
+            <div class="particles"></div>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>简介</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="people.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>人员</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="resources.html" class="nav-link">
+                    <i class="fas fa-book"></i>
+                    <span>资料</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="news.html" class="nav-link">
+                    <i class="fas fa-newspaper"></i>
+                    <span>新闻资讯</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="experience.html" class="nav-link">
+                    <i class="fas fa-comments"></i>
+                    <span>经验交流</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 左侧导航 -->
+        <aside class="side-nav">
+            <a href="#faculty" class="nav-item active">导师</a>
+            <a href="#phd" class="nav-item">博士研究生</a>
+            <a href="#master" class="nav-item">硕士研究生</a>
+            <a href="#undergraduate" class="nav-item">本科生</a>
+            <a href="#alumni" class="nav-item">毕业生</a>
+        </aside>
+
+        <!-- 右侧内容 -->
+        <div class="content">
+            <!-- 导师部分 -->
+            <h2 id="faculty" class="section-title">
+                <i class="fas fa-chalkboard-teacher"></i> 导师
+                <div class="section-decoration"></div>
+            </h2>
+            
+            <div class="members-grid">
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="profile-photo.png" alt="杨金庆">
+                        <div class="member-social">
+                            <a href="#" title="邮箱"><i class="fas fa-envelope"></i></a>
+                            <a href="#" title="个人主页"><i class="fas fa-globe"></i></a>
+                            <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>杨金庆</h3>
+                        <div class="member-title">教授，实验室主任</div>
+                        <p>研究方向：人机交互、数据可视化、人工智能</p>
+                        <p>电子邮件：example@university.edu</p>
+                        <p>办公室：科研楼 A-101</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 博士研究生部分 -->
+            <h2 id="phd" class="section-title">
+                <i class="fas fa-user-graduate"></i> 博士研究生
+                <div class="section-decoration"></div>
+            </h2>
+            
+            <div class="members-grid">
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="https://ui-avatars.com/api/?name=张明&background=random" alt="张明">
+                        <div class="member-social">
+                            <a href="#" title="邮箱"><i class="fas fa-envelope"></i></a>
+                            <a href="#" title="个人主页"><i class="fas fa-globe"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>张明</h3>
+                        <div class="member-title">博士研究生</div>
+                        <p>研究方向：机器学习</p>
+                        <p>电子邮件：zhang@example.edu</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 硕士研究生部分 -->
+            <h2 id="master" class="section-title">
+                <i class="fas fa-user-graduate"></i> 硕士研究生
+                <div class="section-decoration"></div>
+            </h2>
+            
+            <div class="members-grid">
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="https://ui-avatars.com/api/?name=李华&background=random" alt="李华">
+                        <div class="member-social">
+                            <a href="#" title="邮箱"><i class="fas fa-envelope"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>李华</h3>
+                        <div class="member-title">硕士研究生</div>
+                        <p>研究方向：数据可视化</p>
+                        <p>电子邮件：li@example.edu</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 本科生部分 -->
+            <h2 id="undergraduate" class="section-title">
+                <i class="fas fa-user"></i> 本科生
+                <div class="section-decoration"></div>
+            </h2>
+            
+            <div class="members-grid">
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="https://ui-avatars.com/api/?name=王小明&background=random" alt="王小明">
+                        <div class="member-social">
+                            <a href="#" title="邮箱"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>王小明</h3>
+                        <div class="member-title">本科生</div>
+                        <p>研究方向：人机交互</p>
+                        <p>电子邮件：wang@example.edu</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 毕业生部分 -->
+            <h2 id="alumni" class="section-title">
+                <i class="fas fa-user-clock"></i> 毕业生
+                <div class="section-decoration"></div>
+            </h2>
+            
+            <div class="members-grid">
+                <div class="member-card alumni">
+                    <div class="member-photo">
+                        <img src="https://ui-avatars.com/api/?name=周强&background=random" alt="周强">
+                        <div class="member-social">
+                            <a href="#" title="邮箱"><i class="fas fa-envelope"></i></a>
+                            <a href="#" title="领英"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>周强</h3>
+                        <div class="member-title">2022届硕士</div>
+                        <p>现任职：阿里巴巴</p>
+                        <p>研究方向：大数据分析</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 杨金庆. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+</body>
+</html>

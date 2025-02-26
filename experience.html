@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>经验交流 - 杨金庆实验室</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="experience.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部横幅 -->
+    <header class="banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <h1>杨金庆</h1>
+                <div class="banner-subtitle">
+                    <span class="typing-text">踏实务本的科学实验室</span>
+                </div>
+            </div>
+            <div class="banner-decoration">
+                <div class="decoration-circle"></div>
+                <div class="decoration-line"></div>
+            </div>
+        </div>
+        <div class="banner-background">
+            <div class="particles"></div>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>简介</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="people.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>人员</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="resources.html" class="nav-link">
+                    <i class="fas fa-book"></i>
+                    <span>资料</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="news.html" class="nav-link">
+                    <i class="fas fa-newspaper"></i>
+                    <span>新闻资讯</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+                <li><a href="experience.html" class="nav-link">
+                    <i class="fas fa-comments"></i>
+                    <span>经验交流</span>
+                    <div class="nav-indicator"></div>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <div class="experience-container">
+            <div class="experience-intro">
+                <h2><i class="fas fa-lightbulb"></i> 交流与分享</h2>
+                <p>欢迎加入我们的学术社区，在这里您可以与实验室成员和其他研究者交流经验、分享资源、参与讨论。</p>
+            </div>
+            
+            <!-- 功能卡片区域 -->
+            <div class="cards-container">
+                <!-- 微信交流群 -->
+                <div class="feature-card qr-card">
+                    <div class="card-front">
+                        <div class="icon">
+                            <i class="fab fa-weixin"></i>
+                        </div>
+                        <h2>微信交流群</h2>
+                        <p>加入实验室官方微信群，获取最新资讯和交流机会</p>
+                        <button class="show-qr-btn">点击查看二维码 <i class="fas fa-qrcode"></i></button>
+                    </div>
+                    <div class="card-back">
+                        <div class="qr-code">
+                            <img src="qr-code.png" alt="交流群二维码">
+                        </div>
+                        <p>请使用微信扫描二维码</p>
+                        <button class="hide-qr-btn"><i class="fas fa-arrow-left"></i> 返回</button>
+                    </div>
+                </div>
+
+                <!-- 学术资源 -->
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h2>学术资源</h2>
+                    <p>实验室整理的学习资料、论文推荐和研究工具</p>
+                    <div class="resource-list">
+                        <a href="#" class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>入门指南.pdf</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <i class="fas fa-link"></i>
+                            <span>推荐论文清单</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <i class="fas fa-tools"></i>
+                            <span>研究工具集</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 在线讨论区 -->
+                <div class="feature-card discussion-card">
+                    <div class="icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h2>在线讨论</h2>
+                    <p>参与学术讨论，分享研究心得</p>
+                    <div class="discussion-preview">
+                        <div class="discussion-topic">
+                            <span class="topic-tag">最新</span>
+                            <h3>深度学习在计算机视觉中的应用</h3>
+                            <p class="topic-meta">10 个回复 · 2小时前</p>
+                        </div>
+                        <div class="discussion-topic">
+                            <span class="topic-tag">热门</span>
+                            <h3>如何提高研究效率？</h3>
+                            <p class="topic-meta">32 个回复 · 1天前</p>
+                        </div>
+                    </div>
+                    <button class="view-more-btn">查看更多讨论</button>
+                </div>
+            </div>
+
+            <!-- 最新动态 -->
+            <div class="updates-section">
+                <h2><i class="fas fa-bell"></i> 最新动态</h2>
+                <div class="updates-list">
+                    <div class="update-item">
+                        <div class="update-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="update-content">
+                            <h3>学术讲座预告</h3>
+                            <p>主题：人工智能前沿进展</p>
+                            <p class="update-meta">时间：2024年3月15日 14:00</p>
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="update-content">
+                            <h3>实验室最新成果</h3>
+                            <p>论文被CVPR 2024录用</p>
+                            <p class="update-meta">发布时间：2024年2月28日</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 杨金庆. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+</body>
+</html>
