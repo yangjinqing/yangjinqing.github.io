@@ -1,0 +1,536 @@
+/* 主要内容布局 */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.experience-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.experience-intro h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.experience-intro h2 i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.experience-intro p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* 卡片容器 */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.qr-card {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+}
+
+/* 正面样式 */
+.card-front {
+    transform: rotateY(0deg);
+    background: linear-gradient(135deg, var(--white) 0%, #f8f9fa 100%);
+}
+
+.qr-card.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.card-front .icon {
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.card-front h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.card-front p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin: 1rem 0 2rem;
+    text-align: center;
+}
+
+/* 背面样式 */
+.card-back {
+    transform: rotateY(-180deg);
+    background: linear-gradient(135deg, var(--white) 0%, #f0f7ff 100%);
+}
+
+.qr-card.flipped .card-back {
+    transform: rotateY(0deg);
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-code img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 按钮样式 */
+.show-qr-btn,
+.hide-qr-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--primary-color);
+    color: var(--white);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.show-qr-btn:hover,
+.hide-qr-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* 功能卡片样式更新 */
+.feature-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 400px;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* 资源列表样式 */
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: var(--border-radius);
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.resource-item:hover {
+    background: rgba(52, 152, 219, 0.2);
+    transform: translateX(5px);
+}
+
+/* 讨论区样式 */
+.discussion-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.discussion-topic {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+}
+
+.topic-tag {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.topic-tag:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.topic-tag {
+    background: var(--primary-color);
+    color: white;
+}
+
+.topic-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+/* 最新动态部分 */
+.updates-section {
+    margin-top: 2rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.updates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.update-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.update-item:hover {
+    transform: translateX(5px);
+    background: #f0f7ff;
+}
+
+.update-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.update-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--secondary-color);
+}
+
+.update-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+/* 表单增强样式 */
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: white;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .update-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+
+/* 基础容器样式 */
+.achievements-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 页面介绍部分 */
+.achievements-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.achievements-intro h2 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.achievements-intro h2 i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.achievements-intro p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* 论文列表容器 */
+.papers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* 年份分隔标题 */
+.year-divider {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+/* 移除年份分隔样式 */
+.papers-container {
+    margin: 2rem 0;
+}
+
+/* 论文网格布局 */
+.papers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* 论文卡片基础样式 */
+.paper-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #0066ff;
+    margin-bottom: 2rem;
+}
+
+/* 2025年和2023年论文卡片特殊样式 */
+.paper-card[data-year="2025"],
+.paper-card[data-year="2023"] {
+    grid-column: 1 / -1;
+    padding: 2.5rem;
+    border-left: 6px solid #0066ff;
+}
+
+.paper-card[data-year="2025"] .paper-title,
+.paper-card[data-year="2023"] .paper-title {
+    font-size: 1.6rem;
+}
+
+.paper-card[data-year="2025"] .paper-authors,
+.paper-card[data-year="2023"] .paper-authors {
+    font-size: 1.2rem;
+}
+
+/* 其他样式保持不变 */
+.paper-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.paper-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.paper-tag {
+    color: #0066ff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.paper-date {
+    color: #666;
+    font-size: 1rem;
+}
+
+.paper-title {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.paper-authors {
+    color: #444;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.paper-journal {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.paper-index {
+    color: #0066ff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .papers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.paper-abstract {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.paper-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.paper-link {
+    color: #4a90e2;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.paper-link:hover {
+    text-decoration: underline;
+}
+
+.projects-section {
+    margin-top: 3rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.project-icon {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-right: 1rem;
+}
+
+.project-content h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.project-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
