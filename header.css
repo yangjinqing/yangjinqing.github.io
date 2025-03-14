@@ -1,36 +1,87 @@
 /* 顶部横幅样式 */
 .banner {
     position: relative;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background: linear-gradient(125deg, 
+        rgba(0, 82, 204, 0.95), 
+        rgba(0, 191, 255, 0.85));
     color: white;
-    padding: 4rem 2rem;
+    padding: 0.2rem 2rem;
     overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 添加动态背景效果 */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite alternate;
+}
+
+/* 添加动画关键帧 */
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .banner {
+        padding: 1rem 1rem;  /* 移动端相应调整 */
+    }
 }
 
 .banner-content {
     position: relative;
-    max-width: 1200px;
+    max-width: 100%;  /* 允许更宽的内容区域 */
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 2;
 }
 
+.typing-text {
+    font-size: 2.5em;  /* 调整为标题大小 */
+    font-weight: 800;
+    color: #fff;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: none;
+    animation: none;
+    letter-spacing: -0.02em;
+    opacity: 1;
+    transform: scale(1);  /* 移除缩放 */
+}
+
+
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .typing-text {
+        font-size: 2.5em;
+    }
+}
+
 .banner-text {
     flex: 1;
-}
-
-.banner h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    animation: slideInLeft 0.8s ease-out;
-}
-
-.banner-subtitle {
-    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    padding: 0;
 }
 
 .typing-text {
@@ -251,4 +302,42 @@
 
 .nav-link:hover i {
     color: var(--primary-color);
-} 
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .typing-text {
+        font-size: 3em;  /* 移动端适当缩小 */
+    }
+    .banner-text {
+        padding-right: 5%;  /* 移动端减小偏移 */
+    }
+}
+
+
+.nav-container ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.nav-link i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.nav-link span {
+    white-space: nowrap;
+}
